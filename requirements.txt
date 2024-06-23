@@ -13,4 +13,4 @@ scipy
 snowflake==0.7.0
 openpyxl
 xlrd
-st_aggrid
+streamlit-aggrid
