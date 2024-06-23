@@ -31,7 +31,7 @@ vessel_particulars = pd.read_excel('VESSEL_PARTICULARS.xlsx')
 def get_data():
     return get_expense_data()
 
-last_3_years = get_expense_data()
+last_3_years = get_data()
 
 # Sidebar navigation
 page = st.sidebar.radio("Navigation", ["1. Report Page", "2. Trend Analysis"])
