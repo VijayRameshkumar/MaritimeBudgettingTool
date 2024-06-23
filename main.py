@@ -655,7 +655,7 @@ def get_json_data(cat_df, flag='cat'):
         grp_tot_cat = grp_tot_cat.sort_values(by='order', ascending=True)
         # grp_tot_cat.drop('order', axis=1, inplace=True)
         grp_tot_cat = grp_tot_cat.set_index('Header')
-        grp_tot_cat = grp_tot_cat.astype('int')
+        # grp_tot_cat = grp_tot_cat.astype('int')
         
         grp_tot_cat = grp_tot_cat.T.to_json()
         
