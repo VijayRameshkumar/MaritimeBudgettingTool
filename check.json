@@ -1,0 +1,174 @@
+[
+    {
+        "median_50perc_population": 88421.0,
+        "optimal_63perc_population": 97013.0,
+        "top_75perc_population": 108545.0,
+        "Stats Model - Optimal Budget": null,
+        "order": 0.0,
+        "records": [
+            {
+                "Header": "Manning",
+                "CATEGORIES": "CREW WAGES",
+                "median_50perc_population": 67336,
+                "optimal_63perc_population": 70033,
+                "top_75perc_population": 73831,
+                "order": 0
+            },
+            {
+                "Header": "Manning",
+                "CATEGORIES": "CREW EXPENSES",
+                "median_50perc_population": 15184,
+                "optimal_63perc_population": 20620,
+                "top_75perc_population": 27581,
+                "order": 1
+            },
+            {
+                "Header": "Manning",
+                "CATEGORIES": "VICTUALLING EXPENSES",
+                "median_50perc_population": 5901,
+                "optimal_63perc_population": 6360,
+                "top_75perc_population": 7133,
+                "order": 2
+            }
+        ],
+        "Header": "Manning"
+    },
+    {
+        "median_50perc_population": 34065.0,
+        "optimal_63perc_population": 52954.0,
+        "top_75perc_population": 83982.0,
+        "Stats Model - Optimal Budget": null,
+        "order": 1.0,
+        "records": [
+            {
+                "Header": "Technical",
+                "CATEGORIES": "STORES",
+                "median_50perc_population": 4866,
+                "optimal_63perc_population": 9338,
+                "top_75perc_population": 15503,
+                "order": 3
+            },
+            {
+                "Header": "Technical",
+                "CATEGORIES": "SPARES",
+                "median_50perc_population": 10740,
+                "optimal_63perc_population": 15938,
+                "top_75perc_population": 26306,
+                "order": 4
+            },
+            {
+                "Header": "Technical",
+                "CATEGORIES": "REPAIRS & MAINTENANCE",
+                "median_50perc_population": 4252,
+                "optimal_63perc_population": 9107,
+                "top_75perc_population": 14200,
+                "order": 5
+            },
+            {
+                "Header": "Technical",
+                "CATEGORIES": "MISCELLANEOUS",
+                "median_50perc_population": 5491,
+                "optimal_63perc_population": 7735,
+                "top_75perc_population": 11622,
+                "order": 6
+            },
+            {
+                "Header": "Technical",
+                "CATEGORIES": "LUBE OIL CONSUMPTION",
+                "median_50perc_population": 8716,
+                "optimal_63perc_population": 10836,
+                "top_75perc_population": 16351,
+                "order": 7
+            }
+        ],
+        "Header": "Technical"
+    },
+    {
+        "median_50perc_population": 10625.0,
+        "optimal_63perc_population": 11644.0,
+        "top_75perc_population": 13600.0,
+        "Stats Model - Optimal Budget": null,
+        "order": 2.0,
+        "records": [
+            {
+                "Header": "Management",
+                "CATEGORIES": "MANAGEMENT FEES",
+                "median_50perc_population": 10625,
+                "optimal_63perc_population": 11644,
+                "top_75perc_population": 13600,
+                "order": 8
+            }
+        ],
+        "Header": "Management"
+    },
+    {
+        "median_50perc_population": 121.0,
+        "optimal_63perc_population": 338.0,
+        "top_75perc_population": 626.0,
+        "Stats Model - Optimal Budget": null,
+        "order": 4.0,
+        "records": [
+            {
+                "Header": "Administrative Expenses",
+                "CATEGORIES": "ADMINISTRATIVE EXPENSES",
+                "median_50perc_population": 121,
+                "optimal_63perc_population": 338,
+                "top_75perc_population": 626,
+                "order": 10
+            }
+        ],
+        "Header": "Administrative Expenses"
+    },
+    {
+        "median_50perc_population": null,
+        "optimal_63perc_population": null,
+        "top_75perc_population": null,
+        "Stats Model - Optimal Budget": null,
+        "order": 4.0,
+        "records": [
+            {
+                "Header": "OPEX/DAY",
+                "CATEGORIES": "Without Lube Oil",
+                "median_50perc_population": 4150,
+                "optimal_63perc_population": 5037,
+                "top_75perc_population": 6346,
+                "order": 99
+            },
+            {
+                "Header": "OPEX/DAY",
+                "CATEGORIES": "With Lube Oil",
+                "median_50perc_population": 4441,
+                "optimal_63perc_population": 5398,
+                "top_75perc_population": 6891,
+                "order": 100
+            }
+        ],
+        "Header": "OPEX/DAY"
+    },
+    {
+        "median_50perc_population": null,
+        "optimal_63perc_population": null,
+        "top_75perc_population": null,
+        "Stats Model - Optimal Budget": null,
+        "order": 4.0,
+        "records": [
+            {
+                "Header": "Total OPEX",
+                "CATEGORIES": "Without Lube Oil",
+                "median_50perc_population": 124516,
+                "optimal_63perc_population": 151113,
+                "top_75perc_population": 190402,
+                "order": 39
+            },
+            {
+                "Header": "Total OPEX",
+                "CATEGORIES": "With Lube Oil",
+                "median_50perc_population": 133232,
+                "optimal_63perc_population": 161949,
+                "top_75perc_population": 206753,
+                "order": 46
+            }
+        ],
+        "Header": "Total OPEX"
+    }
+]

@@ -20,30 +20,18 @@ from st_aggrid import AgGrid, GridOptionsBuilder, JsCode, GridUpdateMode
 from scipy.interpolate import CubicSpline
 # from src.snowflake_connect import get_expense_data
 
+# Set page layout
+st.set_page_config(layout="wide")
 
 ### Read Data
 vessel_particulars = pd.read_excel('VESSEL_PARTICULARS.xlsx')
 # last_3_years = pd.read_csv('2021_2022_2023_expense.csv', skiprows=1).rename(columns={'AMOUNT_USD': 'Expense'})
-
-# Set page layout
-st.set_page_config(layout="wide")
 
 @st.cache_data
 def get_data():
     return get_expense_data()
 
 last_3_years = get_expense_data()
-
-st.write(last_3_years.info())
-
-# last_3_years = get_expense_data()
-# Merge last_3_years with vessel_particulars to include DATE column
-merged_df = pd.merge(last_3_years, vessel_particulars[['COST_CENTER', 'VESSEL NAME', 'BUILD YEAR']], on='COST_CENTER', how='left')
-# Add VESSEL AGE to merged_df
-merged_df['VESSEL AGE'] = pd.to_datetime(merged_df['DATE']).dt.year - merged_df['BUILD YEAR']
-last_3_years['VESSEL AGE'] = pd.to_datetime(merged_df['DATE']).dt.year - merged_df['BUILD YEAR']
-last_3_years['CATEGORIES'] = last_3_years['CATEGORIES'].str.upper()
-merged_df['CATEGORIES'] = merged_df['CATEGORIES'].str.upper()
 
 # Sidebar navigation
 page = st.sidebar.radio("Navigation", ["1. Report Page", "2. Trend Analysis"])
@@ -59,6 +47,17 @@ with st.container():
     # logo_path = "./Syn-DD.png"
     # col0.image(logo_path, width=250)
     st.markdown("---")
+
+# st.write(last_3_years.info())
+
+# last_3_years = get_expense_data()
+# Merge last_3_years with vessel_particulars to include DATE column
+merged_df = pd.merge(last_3_years, vessel_particulars[['COST_CENTER', 'VESSEL NAME', 'BUILD YEAR']], on='COST_CENTER', how='left')
+# Add VESSEL AGE to merged_df
+merged_df['VESSEL AGE'] = pd.to_datetime(merged_df['DATE']).dt.year - merged_df['BUILD YEAR']
+last_3_years['VESSEL AGE'] = pd.to_datetime(merged_df['DATE']).dt.year - merged_df['BUILD YEAR']
+last_3_years['CATEGORIES'] = last_3_years['CATEGORIES'].str.upper()
+merged_df['CATEGORIES'] = merged_df['CATEGORIES'].str.upper()
 
 # Filter DataFrame based on slicer values
 @st.cache_data
