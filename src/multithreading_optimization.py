@@ -215,7 +215,7 @@ def get_event_cat_optimal_mean(exl):
         median_value = np.quantile(transformed_data, 0.75)
         std_dev = np.std(transformed_data)
         
-        mode_value = mode(transformed_data).mode[0]
+        # mode_value = mode(transformed_data).mode[0]
 
         x = np.linspace(mean_value - 3 * std_dev, mean_value + 3 * std_dev, 1000)
         y = norm.pdf(x, mean_value, std_dev)
@@ -268,7 +268,7 @@ def get_event_subcat_optimal_mean(exl):
         median_value = np.quantile(transformed_data, 0.75)
         std_dev = np.std(transformed_data)
         
-        mode_value = mode(transformed_data).mode[0]
+        # mode_value = mode(transformed_data).mode[0]
 
         x = np.linspace(mean_value - 3 * std_dev, mean_value + 3 * std_dev, 1000)
         y = norm.pdf(x, mean_value, std_dev)
