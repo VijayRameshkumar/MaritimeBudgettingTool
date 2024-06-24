@@ -607,6 +607,18 @@ def return_grid_options(data, flag='Cat'):
           
     return gridOptions
 
+def make_unique(columns):
+    seen = {}
+    new_columns = []
+    for col in columns:
+        if col in seen:
+            seen[col] += 1
+            new_columns.append(f"{col}.{seen[col]}")
+        else:
+            seen[col] = 0
+            new_columns.append(col)
+    return new_columns
+
 def get_json_data(cat_df, flag='cat'):
     
     if flag == 'cat':
@@ -628,6 +640,8 @@ def get_json_data(cat_df, flag='cat'):
         grp_tot_cat = grp_tot_cat.sort_values(by='order', ascending=True)
         grp_tot_cat = grp_tot_cat.set_index('Header')        
         grp_tot_cat = grp_tot_cat.sort_values(by='order', ascending=True)
+        # Check for duplicate columns and rename them if necessary
+        grp_tot_cat.columns = make_unique(grp_tot_cat.columns)
         
         grp_tot_cat = grp_tot_cat.T.to_json()
         
@@ -659,6 +673,9 @@ def get_json_data(cat_df, flag='cat'):
         # grp_tot_cat.drop('order', axis=1, inplace=True)
         grp_tot_cat = grp_tot_cat.set_index('Header')
         # grp_tot_cat = grp_tot_cat.astype('int')
+        # Check for duplicate columns and rename them if necessary
+        # grp_tot_cat.columns = pd.io.parsers.ParserBase({'names': grp_tot_cat.columns})._maybe_dedup_names(grp_tot_cat.columns)
+        grp_tot_cat.columns = make_unique(grp_tot_cat.columns)
         
         grp_tot_cat = grp_tot_cat.T.to_json()
         
