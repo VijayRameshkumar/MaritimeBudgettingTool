@@ -657,7 +657,7 @@ def get_json_data(cat_df, flag='cat'):
         grp_tot_cat = grp_tot_cat.set_index('Header')
         # grp_tot_cat = grp_tot_cat.astype('int')
         
-        grp_tot_cat = grp_tot_cat.T.to_dict()
+        grp_tot_cat = grp_tot_cat.T.to_json()
         
         ## cate vise sum
         json_data = {}
