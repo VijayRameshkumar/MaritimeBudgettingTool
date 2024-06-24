@@ -20,6 +20,9 @@ from st_aggrid import AgGrid, GridOptionsBuilder, JsCode, GridUpdateMode
 from scipy.interpolate import CubicSpline
 # from src.snowflake_connect import get_expense_data
 
+import warnings
+warnings.filterwarnings('ignore')
+
 # Set page layout
 st.set_page_config(layout="wide")
 
