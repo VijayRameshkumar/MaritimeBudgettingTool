@@ -36,6 +36,13 @@ def get_data():
 
 last_3_years = get_data()
 
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 # Sidebar navigation
 page = st.sidebar.radio("Navigation", ["1. Report Page", "2. Trend Analysis"])
 
